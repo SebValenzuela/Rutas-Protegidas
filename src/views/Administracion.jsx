@@ -1,4 +1,4 @@
 const Administracion = () => {
-  return <div>Administración</div>;
+  return <div>Pokemones</div>;
 };
 export default Administracion;

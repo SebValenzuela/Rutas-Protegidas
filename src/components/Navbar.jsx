@@ -5,29 +5,26 @@ const Navbar = () => {
   return (
     <div>
       <nav>
-        <NavLink
-          className={setActiveClass}
-          to="/"
-        >
-          {" "}
-          Home{" "}
-        </NavLink>
+        <div>
+          <img src="" alt="" />
+        </div>
+        <div>
+          <NavLink
+            className={setActiveClass}
+            to="/"
+          >
+            {" "}
+            Home{" "}
+          </NavLink>
 
-        <NavLink
-          className={setActiveClass}
-          to="/admin"
-        >
-          {" "}
-          Administracion{" "}
-        </NavLink>
-
-        <NavLink
-          className={setActiveClass}
-          to="/login"
-        >
-          {" "}
-          Login{" "}
-        </NavLink>
+          <NavLink
+            className={setActiveClass}
+            to="/admin"
+          >
+            {" "}
+            Pokemones{" "}
+          </NavLink>
+        </div>
       </nav>
     </div>
   );

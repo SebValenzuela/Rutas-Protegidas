@@ -1,11 +1,32 @@
+* {
+  text-decoration: none !important;
+}
+
+body {
+  margin: 0;
+}
+
 nav {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 30px;
- }
- 
+  background-color: #58585A;
+}
+
+nav a {
+  color: #fff;
+}
+
 .active {
-color: darkgreen;
+color: #E60C08;
 font-weight: bold;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  color: #58585A;
 }

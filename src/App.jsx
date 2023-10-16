@@ -5,7 +5,6 @@ import { UserContext } from "./context/userContext";
 
 import Administracion from "./views/Administracion";
 import Home from "./views/Home";
-import Login from "./views/Login";
 
 const App = () => {
   const { user } = useContext(UserContext);
@@ -21,10 +20,6 @@ const App = () => {
         <Route
           path="/admin"
           element={user ? <Administracion /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/login"
-          element={<Login />}
         />
       </Routes>
     </div>
