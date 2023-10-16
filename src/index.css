@@ -10,12 +10,26 @@ nav {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 30px;
+  padding: 10px 30px;
   background-color: #58585A;
 }
 
 nav a {
   color: #fff;
+  margin: 0 5px;
+}
+
+nav > .row {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-img {
+  height: 30px;
+}
+
+.links-nav-col {
+  text-align: right;
 }
 
 .active {
@@ -82,12 +96,17 @@ font-weight: bold;
   padding: 10px;
 }
 
-.pokemon-card .card .row {
+.row {
   display: flex;
+  align-items: center;
 }
 
-.pokemon-card .card .row .col-6 {
+.row .col-6 {
   width: 50%;
+}
+
+.justify-end {
+  justify-content: end;
 }
 
 .pokemon-card .card .row .col-6 img {
