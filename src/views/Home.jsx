@@ -4,7 +4,7 @@ const Home = () => {
       <h1 className="text-center">Bienvenido maestro Pokemón</h1><br/>
     </div>
     <div className="image-presentation">
-      <img src="" alt="" />
+      <img src="../../public/assets/img/imaage-presentation.png" alt="" />
     </div>
   </div>;
 };

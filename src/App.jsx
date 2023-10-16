@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { UserContext } from "./context/userContext";
 
@@ -8,21 +9,22 @@ import Home from "./views/Home";
 
 const App = () => {
   const { user } = useContext(UserContext);
+  const navigate = useNavigate();
+  const { id } = useParams(); // Utiliza useParams para obtener los parámetros de la URL
 
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        <Route path="/" element={<Home />} />
         <Route
           path="/admin"
-          element={user ? <Administracion /> : <Navigate to="/login" />}
+          element={user ? <Administracion /> : () => navigate('/login')}
         />
       </Routes>
+      {id && <p>Parámetro 'id' de la URL: {id}</p>} {/* Muestra el parámetro 'id' si existe */}
     </div>
   );
 };
+
 export default App;
